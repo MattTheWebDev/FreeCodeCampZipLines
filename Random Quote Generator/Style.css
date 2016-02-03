@@ -1,0 +1,20 @@
+body {
+	margin:0px;
+	padding:0px;
+	background-color:#ecf0f1;
+	font-family: 'Bangers', cursive;
+}
+#quoteBox {
+	text-align:center;
+	border:5px solid black;
+	width:400px;
+	margin:0 auto;
+}
+h1 {
+	text-align:center;
+}
+#centerButton {
+	text-align:center;
+	margin:0 auto;
+	padding-top:20px;
+}
