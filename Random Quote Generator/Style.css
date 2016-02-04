@@ -3,18 +3,40 @@ body {
 	padding:0px;
 	background-color:#ecf0f1;
 	font-family: 'Bangers', cursive;
+	background-image:url(http://wallpapercave.com/wp/rC3kRtk.jpg);
+	color:white;
 }
 #quoteBox {
 	text-align:center;
 	border:5px solid black;
 	width:400px;
 	margin:0 auto;
+	font-size:3em;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+	background: #fefcea; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #fefcea 0%, #f1da36 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #fefcea 0%,#f1da36 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #fefcea 0%,#f1da36 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color:black;
 }
 h1 {
 	text-align:center;
+	-webkit-text-stroke: 1px black;
 }
-#centerButton {
+.centerButton {
 	text-align:center;
 	margin:0 auto;
 	padding-top:20px;
+}
+.button {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fefcea+0,f1da36+100;Gold+3D */
+	background: #fefcea; /* Old browsers */
+	background: -moz-radial-gradient(center, ellipse cover,  #fefcea 0%, #f1da36 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  #fefcea 0%,#f1da36 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  #fefcea 0%,#f1da36 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#f1da36',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	font-family: 'Bangers', cursive;
+	border: 1px solid black;
+	font-size:2em;
 }

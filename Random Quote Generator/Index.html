@@ -3,30 +3,46 @@
 <title>Random Quote Generator Zipline</title>
 <link href="style.css" type="text/css" rel="stylesheet">
 <script type="text/javascript">
-var quotes = ["With Great Power Comes Great Responsiblity - Ben Parker", 
-"Its clobberin time - The Thing",
-"In brightest day, in blackest night, no evil shall escape my sight. Let those who worship evil's might, beware my power, Green Lantern's light! - Green Lantern Oath", 
-"Discussion is for Bio Organisms - Deathlok", 
-"If only those bricks could talk....the things they'd said would help build better prisions in the future - The Spirit"]
+var quotes = [
+"'Chimichangas!'",
+"'SHORYUKEN'",
+"'Now, GIMME YOUR MILK MONEY'",
+"'A Poc-key-Lips. I think I found my new favorite word'",
+"'Ah, go web your zipper closed'",
+"'My common sense is tingling'",
+"'You just killed the nice deranged chick from the juice bar that I was going to score with someday maybe!'",
+"'Do I still think in those little yellow boxes?'",
+]
 
 
 function quoteGen() {
-	var i = Math.floor((Math.random() * 4) + 1);
+	var i = Math.floor((Math.random() * quotes.length));
 	document.getElementById("quoteBox").innerHTML = quotes[i];
 }
-
-
+function tweetQuote() {
+	var textToTweet = document.getElementById('quoteBox').innerHTML + 'Created using the Deadpool Quote Generator created by @MattTheWebDev';
+	console.log(textToTweet);
+	var twtLink ='http://twitter.com/home?status=' +encodeURIComponent(textToTweet);
+	window.open(twtLink,'_blank');
+}
 </script>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+
+
+
 <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<h1>Random Quote Generator</h1>
+<h1>Deadpool Quote Generator</h1>
 <div id="quoteBox">
 	"Quote Goes Here"
 
 </div>
-<div id="centerButton">
-	<button type="button" onclick="quoteGen()">Click for a Random Quote!</button>
+<div class="centerButton">
+	<button class="button" type="button" onclick="quoteGen()">Click for a Random Quote!</button>
+</div>
+<div class="centerButton">
+	<button class="button" type="button" onclick="tweetQuote()">Tweet This!</button>
 </div>
 </body>
 </html>
