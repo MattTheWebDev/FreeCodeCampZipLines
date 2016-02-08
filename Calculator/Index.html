@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+<link href="style.css" type="text/css" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<title>Free Code Camp Calculator</title>
+</head>
+
+<body>
+	<h1>Free Code Camp Calculator</h1>
+<div id="calculator">
+<br>
+<div id="display">0</div>
+<div id="buttons">
+<button class="btn" type="button" value="1" onclick="numbers(1);">1</button>
+<button class="btn" type="button" value="2" onclick="numbers(2);">2</button>
+<button class="btn" type="button" value="3"onclick="numbers(3);">3</button>
+<button class="btn orange" type="button" onclick="numbers('+')" value="+">+</button>
+<br>
+<button class="btn" type="button" onclick="numbers(4)" value="4">4</button>
+<button class="btn" type="button" onclick="numbers(5)"value="5">5</button>
+<button class="btn" type="button" onclick="numbers(6)"value="6">6</button>
+<button class="btn orange" type="button" onclick="numbers('-')" value="-">-</button>
+<br>
+<button class="btn" type="button" onclick="numbers(7)" value="7">7</button>
+<button class="btn" type="button" onclick="numbers(8)" value="8">8</button>
+<button class="btn" type="button" onclick="numbers(9)" value="9">9</button>
+<button class="btn orange" type="button" onclick="numbers('/')"value="">&divide;</button>
+<br>
+<button class="btn" type="button" onclick="numbers('.')">.</button>
+<button class="btn" type="button" onclick="numbers(0)" value="">0</button>
+<button class="btn" type="button" onclick="clearAll();">AC</button>
+<button class="btn orange" type="button" onclick="numbers('*')" value="">*</button>
+<br>
+
+
+<button class="btn long" type="button" onclick="backSpace();" value="">C</button>
+<button class="btn orange long" type="button" onclick="doMath();" value="">=</button>
+<br>
+</div>
+</div>
+<script type="text/javascript">
+
+function clearAll() {
+    document.getElementById('display').innerHTML = "0";
+}
+
+function numbers(value) {
+    if (document.getElementById('display').innerHTML == "0") {
+        document.getElementById('display').innerHTML = value;
+        console.log("I ran!");
+    } else {
+        document.getElementById('display').innerHTML += value;
+    }
+}
+
+function backSpace() {
+    console.log("I ran!");
+    var value = document.getElementById("display").innerHTML;
+    console.log(value);
+    document.getElementById("display").innerHTML = value.substr(0, value.length - 1);
+}
+function doMath() {
+var total = eval(document.getElementById("display").innerHTML);
+document.getElementById("display").innerHTML = total;
+}
+
+
+</script>	
+</body>
+</html>
